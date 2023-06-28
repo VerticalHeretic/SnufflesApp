@@ -8,22 +8,72 @@
 
 /* Begin PBXBuildFile section */
 		A0D48B632A4CB8E40086DA54 /* SnufflesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B622A4CB8E40086DA54 /* SnufflesAppApp.swift */; };
-		A0D48B652A4CB8E40086DA54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B642A4CB8E40086DA54 /* ContentView.swift */; };
+		A0D48B652A4CB8E40086DA54 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B642A4CB8E40086DA54 /* CharactersView.swift */; };
 		A0D48B672A4CB8E50086DA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D48B662A4CB8E50086DA54 /* Assets.xcassets */; };
 		A0D48B6B2A4CB8E50086DA54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D48B6A2A4CB8E50086DA54 /* Preview Assets.xcassets */; };
+		A0D48B762A4CB96F0086DA54 /* URLSession+Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B752A4CB96F0086DA54 /* URLSession+Client.swift */; };
+		A0D48B782A4CB9970086DA54 /* JSONEncode+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B772A4CB9970086DA54 /* JSONEncode+Shared.swift */; };
+		A0D48B7A2A4CB9B10086DA54 /* JSONDecoder+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B792A4CB9B10086DA54 /* JSONDecoder+Shared.swift */; };
+		A0D48B7C2A4CB9CA0086DA54 /* URLRequest+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B7B2A4CB9CA0086DA54 /* URLRequest+Builder.swift */; };
+		A0D48B7F2A4CBC3A0086DA54 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B7E2A4CBC3A0086DA54 /* NetworkResponse.swift */; };
+		A0D48B812A4CBCD50086DA54 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B802A4CBCD50086DA54 /* Character.swift */; };
+		A0D48B8A2A4CBDF50086DA54 /* SnufflesAppMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B892A4CBDF50086DA54 /* SnufflesAppMacApp.swift */; };
+		A0D48B8E2A4CBDF60086DA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D48B8D2A4CBDF60086DA54 /* Assets.xcassets */; };
+		A0D48B912A4CBDF60086DA54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D48B902A4CBDF60086DA54 /* Preview Assets.xcassets */; };
+		A0D48B972A4CBE160086DA54 /* JSONEncode+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B772A4CB9970086DA54 /* JSONEncode+Shared.swift */; };
+		A0D48B982A4CBE160086DA54 /* JSONDecoder+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B792A4CB9B10086DA54 /* JSONDecoder+Shared.swift */; };
+		A0D48B992A4CBE160086DA54 /* URLSession+Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B752A4CB96F0086DA54 /* URLSession+Client.swift */; };
+		A0D48B9A2A4CBE160086DA54 /* URLRequest+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B7B2A4CB9CA0086DA54 /* URLRequest+Builder.swift */; };
+		A0D48B9B2A4CBE250086DA54 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B7E2A4CBC3A0086DA54 /* NetworkResponse.swift */; };
+		A0D48B9C2A4CBE250086DA54 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B802A4CBCD50086DA54 /* Character.swift */; };
+		A0D48B9E2A4CBE3A0086DA54 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B642A4CB8E40086DA54 /* CharactersView.swift */; };
+		A0D48BA12A4CBEC00086DA54 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = A0D48BA02A4CBEC00086DA54 /* Factory */; };
+		A0D48BA32A4CBF010086DA54 /* URLComponents+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BA22A4CBF010086DA54 /* URLComponents+Characters.swift */; };
+		A0D48BA52A4CBFA90086DA54 /* URLComponents+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BA42A4CBFA90086DA54 /* URLComponents+Init.swift */; };
+		A0D48BA62A4CBFAB0086DA54 /* URLComponents+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BA42A4CBFA90086DA54 /* URLComponents+Init.swift */; };
+		A0D48BA82A4CC1450086DA54 /* CharacterFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BA72A4CC1450086DA54 /* CharacterFilter.swift */; };
+		A0D48BA92A4CC1450086DA54 /* CharacterFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BA72A4CC1450086DA54 /* CharacterFilter.swift */; };
+		A0D48BAC2A4CC2A90086DA54 /* URLRequest+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BAB2A4CC2A90086DA54 /* URLRequest+Characters.swift */; };
+		A0D48BAD2A4CC2A90086DA54 /* URLRequest+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BAB2A4CC2A90086DA54 /* URLRequest+Characters.swift */; };
+		A0D48BAF2A4CC3090086DA54 /* CharactersClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BAE2A4CC3090086DA54 /* CharactersClient.swift */; };
+		A0D48BB02A4CC3090086DA54 /* CharactersClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BAE2A4CC3090086DA54 /* CharactersClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A0D48B5F2A4CB8E40086DA54 /* SnufflesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnufflesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D48B622A4CB8E40086DA54 /* SnufflesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnufflesAppApp.swift; sourceTree = "<group>"; };
-		A0D48B642A4CB8E40086DA54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A0D48B642A4CB8E40086DA54 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		A0D48B662A4CB8E50086DA54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0D48B682A4CB8E50086DA54 /* SnufflesApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnufflesApp.entitlements; sourceTree = "<group>"; };
 		A0D48B6A2A4CB8E50086DA54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0D48B752A4CB96F0086DA54 /* URLSession+Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Client.swift"; sourceTree = "<group>"; };
+		A0D48B772A4CB9970086DA54 /* JSONEncode+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncode+Shared.swift"; sourceTree = "<group>"; };
+		A0D48B792A4CB9B10086DA54 /* JSONDecoder+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Shared.swift"; sourceTree = "<group>"; };
+		A0D48B7B2A4CB9CA0086DA54 /* URLRequest+Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Builder.swift"; sourceTree = "<group>"; };
+		A0D48B7E2A4CBC3A0086DA54 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		A0D48B802A4CBCD50086DA54 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		A0D48B872A4CBDF50086DA54 /* SnufflesAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnufflesAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D48B892A4CBDF50086DA54 /* SnufflesAppMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnufflesAppMacApp.swift; sourceTree = "<group>"; };
+		A0D48B8D2A4CBDF60086DA54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0D48B902A4CBDF60086DA54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0D48B922A4CBDF60086DA54 /* SnufflesAppMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnufflesAppMac.entitlements; sourceTree = "<group>"; };
+		A0D48BA22A4CBF010086DA54 /* URLComponents+Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Characters.swift"; sourceTree = "<group>"; };
+		A0D48BA42A4CBFA90086DA54 /* URLComponents+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Init.swift"; sourceTree = "<group>"; };
+		A0D48BA72A4CC1450086DA54 /* CharacterFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilter.swift; sourceTree = "<group>"; };
+		A0D48BAB2A4CC2A90086DA54 /* URLRequest+Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Characters.swift"; sourceTree = "<group>"; };
+		A0D48BAE2A4CC3090086DA54 /* CharactersClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A0D48B5C2A4CB8E40086DA54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D48BA12A4CBEC00086DA54 /* Factory in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D48B842A4CBDF50086DA54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,7 +86,9 @@
 		A0D48B562A4CB8E40086DA54 = {
 			isa = PBXGroup;
 			children = (
+				A0D48B962A4CBE040086DA54 /* Shared */,
 				A0D48B612A4CB8E40086DA54 /* SnufflesApp */,
+				A0D48B882A4CBDF50086DA54 /* SnufflesAppMac */,
 				A0D48B602A4CB8E40086DA54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				A0D48B5F2A4CB8E40086DA54 /* SnufflesApp.app */,
+				A0D48B872A4CBDF50086DA54 /* SnufflesAppMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				A0D48B622A4CB8E40086DA54 /* SnufflesAppApp.swift */,
-				A0D48B642A4CB8E40086DA54 /* ContentView.swift */,
 				A0D48B662A4CB8E50086DA54 /* Assets.xcassets */,
 				A0D48B682A4CB8E50086DA54 /* SnufflesApp.entitlements */,
 				A0D48B692A4CB8E50086DA54 /* Preview Content */,
@@ -69,6 +121,92 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A0D48B712A4CB8FB0086DA54 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48B742A4CB95C0086DA54 /* Components */,
+				A0D48B732A4CB94F0086DA54 /* Requests */,
+				A0D48B722A4CB9070086DA54 /* Clients */,
+				A0D48B752A4CB96F0086DA54 /* URLSession+Client.swift */,
+				A0D48B772A4CB9970086DA54 /* JSONEncode+Shared.swift */,
+				A0D48B792A4CB9B10086DA54 /* JSONDecoder+Shared.swift */,
+				A0D48B7B2A4CB9CA0086DA54 /* URLRequest+Builder.swift */,
+				A0D48BA42A4CBFA90086DA54 /* URLComponents+Init.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A0D48B722A4CB9070086DA54 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48BAE2A4CC3090086DA54 /* CharactersClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		A0D48B732A4CB94F0086DA54 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48BAB2A4CC2A90086DA54 /* URLRequest+Characters.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		A0D48B742A4CB95C0086DA54 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48BA22A4CBF010086DA54 /* URLComponents+Characters.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A0D48B7D2A4CBC180086DA54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48B7E2A4CBC3A0086DA54 /* NetworkResponse.swift */,
+				A0D48B802A4CBCD50086DA54 /* Character.swift */,
+				A0D48BA72A4CC1450086DA54 /* CharacterFilter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A0D48B882A4CBDF50086DA54 /* SnufflesAppMac */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48B892A4CBDF50086DA54 /* SnufflesAppMacApp.swift */,
+				A0D48B8D2A4CBDF60086DA54 /* Assets.xcassets */,
+				A0D48B922A4CBDF60086DA54 /* SnufflesAppMac.entitlements */,
+				A0D48B8F2A4CBDF60086DA54 /* Preview Content */,
+			);
+			path = SnufflesAppMac;
+			sourceTree = "<group>";
+		};
+		A0D48B8F2A4CBDF60086DA54 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48B902A4CBDF60086DA54 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0D48B962A4CBE040086DA54 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48B9D2A4CBE2A0086DA54 /* Views */,
+				A0D48B7D2A4CBC180086DA54 /* Models */,
+				A0D48B712A4CB8FB0086DA54 /* Networking */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A0D48B9D2A4CBE2A0086DA54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48B642A4CB8E40086DA54 /* CharactersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,14 +217,35 @@
 				A0D48B5B2A4CB8E40086DA54 /* Sources */,
 				A0D48B5C2A4CB8E40086DA54 /* Frameworks */,
 				A0D48B5D2A4CB8E40086DA54 /* Resources */,
+				A0D48BAA2A4CC16F0086DA54 /* Swiftlint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SnufflesApp;
+			packageProductDependencies = (
+				A0D48BA02A4CBEC00086DA54 /* Factory */,
+			);
 			productName = SnufflesApp;
 			productReference = A0D48B5F2A4CB8E40086DA54 /* SnufflesApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0D48B862A4CBDF50086DA54 /* SnufflesAppMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0D48B932A4CBDF60086DA54 /* Build configuration list for PBXNativeTarget "SnufflesAppMac" */;
+			buildPhases = (
+				A0D48B832A4CBDF50086DA54 /* Sources */,
+				A0D48B842A4CBDF50086DA54 /* Frameworks */,
+				A0D48B852A4CBDF50086DA54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnufflesAppMac;
+			productName = SnufflesAppMac;
+			productReference = A0D48B872A4CBDF50086DA54 /* SnufflesAppMac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,6 +261,9 @@
 					A0D48B5E2A4CB8E40086DA54 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					A0D48B862A4CBDF50086DA54 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 				};
 			};
 			buildConfigurationList = A0D48B5A2A4CB8E40086DA54 /* Build configuration list for PBXProject "SnufflesApp" */;
@@ -113,11 +275,15 @@
 				Base,
 			);
 			mainGroup = A0D48B562A4CB8E40086DA54;
+			packageReferences = (
+				A0D48B9F2A4CBEC00086DA54 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			productRefGroup = A0D48B602A4CB8E40086DA54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A0D48B5E2A4CB8E40086DA54 /* SnufflesApp */,
+				A0D48B862A4CBDF50086DA54 /* SnufflesAppMac */,
 			);
 		};
 /* End PBXProject section */
@@ -132,15 +298,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0D48B852A4CBDF50086DA54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D48B912A4CBDF60086DA54 /* Preview Assets.xcassets in Resources */,
+				A0D48B8E2A4CBDF60086DA54 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0D48BAA2A4CC16F0086DA54 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint .\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0D48B5B2A4CB8E40086DA54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0D48B652A4CB8E40086DA54 /* ContentView.swift in Sources */,
+				A0D48B782A4CB9970086DA54 /* JSONEncode+Shared.swift in Sources */,
+				A0D48B762A4CB96F0086DA54 /* URLSession+Client.swift in Sources */,
+				A0D48B7F2A4CBC3A0086DA54 /* NetworkResponse.swift in Sources */,
+				A0D48B652A4CB8E40086DA54 /* CharactersView.swift in Sources */,
+				A0D48B7C2A4CB9CA0086DA54 /* URLRequest+Builder.swift in Sources */,
+				A0D48BAF2A4CC3090086DA54 /* CharactersClient.swift in Sources */,
+				A0D48BAC2A4CC2A90086DA54 /* URLRequest+Characters.swift in Sources */,
+				A0D48BA32A4CBF010086DA54 /* URLComponents+Characters.swift in Sources */,
 				A0D48B632A4CB8E40086DA54 /* SnufflesAppApp.swift in Sources */,
+				A0D48BA82A4CC1450086DA54 /* CharacterFilter.swift in Sources */,
+				A0D48BA52A4CBFA90086DA54 /* URLComponents+Init.swift in Sources */,
+				A0D48B7A2A4CB9B10086DA54 /* JSONDecoder+Shared.swift in Sources */,
+				A0D48B812A4CBCD50086DA54 /* Character.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D48B832A4CBDF50086DA54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D48B982A4CBE160086DA54 /* JSONDecoder+Shared.swift in Sources */,
+				A0D48B9B2A4CBE250086DA54 /* NetworkResponse.swift in Sources */,
+				A0D48B972A4CBE160086DA54 /* JSONEncode+Shared.swift in Sources */,
+				A0D48B9A2A4CBE160086DA54 /* URLRequest+Builder.swift in Sources */,
+				A0D48BB02A4CC3090086DA54 /* CharactersClient.swift in Sources */,
+				A0D48B9E2A4CBE3A0086DA54 /* CharactersView.swift in Sources */,
+				A0D48BA92A4CC1450086DA54 /* CharacterFilter.swift in Sources */,
+				A0D48B992A4CBE160086DA54 /* URLSession+Client.swift in Sources */,
+				A0D48BA62A4CBFAB0086DA54 /* URLComponents+Init.swift in Sources */,
+				A0D48B8A2A4CBDF50086DA54 /* SnufflesAppMacApp.swift in Sources */,
+				A0D48B9C2A4CBE250086DA54 /* Character.swift in Sources */,
+				A0D48BAD2A4CC2A90086DA54 /* URLRequest+Characters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,15 +506,17 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.verticalcoding.SnufflesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,18 +546,78 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.verticalcoding.SnufflesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0D48B942A4CBDF60086DA54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SnufflesAppMac/SnufflesAppMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SnufflesAppMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 7KN966P9LP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verticalcoding.SnufflesAppMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A0D48B952A4CBDF60086DA54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SnufflesAppMac/SnufflesAppMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SnufflesAppMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 7KN966P9LP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verticalcoding.SnufflesAppMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -353,7 +642,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A0D48B932A4CBDF60086DA54 /* Build configuration list for PBXNativeTarget "SnufflesAppMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D48B942A4CBDF60086DA54 /* Debug */,
+				A0D48B952A4CBDF60086DA54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0D48B9F2A4CBEC00086DA54 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0D48BA02A4CBEC00086DA54 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0D48B9F2A4CBEC00086DA54 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0D48B572A4CB8E40086DA54 /* Project object */;
 }
