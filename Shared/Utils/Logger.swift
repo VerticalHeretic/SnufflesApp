@@ -37,6 +37,7 @@ struct Log {
     static let `default` = factory.make(.default)
     static let userDefaults = factory.make(.userDefaults)
     static let network = factory.make(.network)
+    static let coreData = factory.make(.coreData)
 }
 
 struct LoggerStrategy: LogInterface {
@@ -71,12 +72,14 @@ enum LogCategory {
     case `default`
     case userDefaults
     case network
+    case coreData
     
     var name: String {
         switch self {
         case .default:              return "default"
         case .userDefaults:         return "User defaults"
         case .network:              return "Network"
+        case .coreData:             return "CoreData"
         }
     }
 }

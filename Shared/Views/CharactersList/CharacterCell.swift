@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct CharacterCell: View {
+    @Environment(\.managedObjectContext) private var context
     
     var character: Character
+    var locationTapAction: () -> Void
     
     var body: some View {
         HStack {
@@ -42,6 +44,10 @@ struct CharacterCell: View {
                     .lineLimit(0)
                     .font(.subheadline)
                     .accessibilityLabel("from \(character.location.name)")
+                    .foregroundColor(.accentColor)
+                    .onTapGesture {
+                        locationTapAction()
+                    }
             }
         }
         .padding(.horizontal)
@@ -50,17 +56,8 @@ struct CharacterCell: View {
 
 struct CharacterCell_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterCell(character: Character(id: 1,
-                                           name: "Rick",
-                                           status: .dead,
-                                           species: "Human",
-                                           type: "Type",
-                                           gender: "Men",
-                                           origin: .init(name: "Earth", url: "google.com"),
-                                           location: .init(name: "Earth", url: "google.com"),
-                                           image: "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
-                                           episode: [],
-                                           url: "",
-                                           created: ""))
+        CharacterCell(character: .preview) {
+            
+        }
     }
 }

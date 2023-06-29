@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct SnufflesAppApp: App {
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 CharactersView()
             }
+            .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

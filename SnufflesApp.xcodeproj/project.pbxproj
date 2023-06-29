@@ -18,7 +18,6 @@
 		A0D48B7F2A4CBC3A0086DA54 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B7E2A4CBC3A0086DA54 /* NetworkResponse.swift */; };
 		A0D48B812A4CBCD50086DA54 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B802A4CBCD50086DA54 /* Character.swift */; };
 		A0D48B8A2A4CBDF50086DA54 /* SnufflesAppMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B892A4CBDF50086DA54 /* SnufflesAppMacApp.swift */; };
-		A0D48B8E2A4CBDF60086DA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D48B8D2A4CBDF60086DA54 /* Assets.xcassets */; };
 		A0D48B912A4CBDF60086DA54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D48B902A4CBDF60086DA54 /* Preview Assets.xcassets */; };
 		A0D48B972A4CBE160086DA54 /* JSONEncode+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B772A4CB9970086DA54 /* JSONEncode+Shared.swift */; };
 		A0D48B982A4CBE160086DA54 /* JSONDecoder+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48B792A4CB9B10086DA54 /* JSONDecoder+Shared.swift */; };
@@ -45,6 +44,13 @@
 		A0D48BBD2A4D50B10086DA54 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BBB2A4D50B10086DA54 /* CharacterCell.swift */; };
 		A0D48BC12A4D62330086DA54 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = A0D48BC02A4D62330086DA54 /* Factory */; };
 		A0D48BC22A4D62520086DA54 /* URLComponents+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BA22A4CBF010086DA54 /* URLComponents+Characters.swift */; };
+		A0D48BC62A4D641D0086DA54 /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BC52A4D641D0086DA54 /* CharacterDetailsView.swift */; };
+		A0D48BC72A4D641D0086DA54 /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BC52A4D641D0086DA54 /* CharacterDetailsView.swift */; };
+		A0D48BCA2A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BC82A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld */; };
+		A0D48BCB2A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BC82A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld */; };
+		A0D48BCD2A4D7D090086DA54 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BCC2A4D7D090086DA54 /* DataController.swift */; };
+		A0D48BCE2A4D7D090086DA54 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BCC2A4D7D090086DA54 /* DataController.swift */; };
+		A0D48BD02A4D800E0086DA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D48B662A4CB8E50086DA54 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +68,6 @@
 		A0D48B802A4CBCD50086DA54 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		A0D48B872A4CBDF50086DA54 /* SnufflesAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnufflesAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D48B892A4CBDF50086DA54 /* SnufflesAppMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnufflesAppMacApp.swift; sourceTree = "<group>"; };
-		A0D48B8D2A4CBDF60086DA54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0D48B902A4CBDF60086DA54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0D48B922A4CBDF60086DA54 /* SnufflesAppMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnufflesAppMac.entitlements; sourceTree = "<group>"; };
 		A0D48BA22A4CBF010086DA54 /* URLComponents+Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Characters.swift"; sourceTree = "<group>"; };
@@ -73,6 +78,9 @@
 		A0D48BB12A4CC9CA0086DA54 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		A0D48BB52A4D48390086DA54 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A0D48BBB2A4D50B10086DA54 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		A0D48BC52A4D641D0086DA54 /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
+		A0D48BC92A4D7C3D0086DA54 /* SnuffleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnuffleApp.xcdatamodel; sourceTree = "<group>"; };
+		A0D48BCC2A4D7D090086DA54 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 		A0D48B562A4CB8E40086DA54 = {
 			isa = PBXGroup;
 			children = (
+				A0D48BC82A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld */,
 				A0D48B962A4CBE040086DA54 /* Shared */,
 				A0D48B612A4CB8E40086DA54 /* SnufflesApp */,
 				A0D48B882A4CBDF50086DA54 /* SnufflesAppMac */,
@@ -187,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				A0D48B892A4CBDF50086DA54 /* SnufflesAppMacApp.swift */,
-				A0D48B8D2A4CBDF60086DA54 /* Assets.xcassets */,
 				A0D48B922A4CBDF60086DA54 /* SnufflesAppMac.entitlements */,
 				A0D48B8F2A4CBDF60086DA54 /* Preview Content */,
 			);
@@ -216,9 +224,7 @@
 		A0D48B9D2A4CBE2A0086DA54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A0D48B642A4CB8E40086DA54 /* CharactersView.swift */,
-				A0D48BB12A4CC9CA0086DA54 /* CharactersViewModel.swift */,
-				A0D48BBB2A4D50B10086DA54 /* CharacterCell.swift */,
+				A0D48BC32A4D63FB0086DA54 /* CharactersList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				A0D48BB52A4D48390086DA54 /* Logger.swift */,
+				A0D48BCC2A4D7D090086DA54 /* DataController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -236,6 +243,25 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0D48BC32A4D63FB0086DA54 /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48BC42A4D64030086DA54 /* CharacterDetails */,
+				A0D48B642A4CB8E40086DA54 /* CharactersView.swift */,
+				A0D48BB12A4CC9CA0086DA54 /* CharactersViewModel.swift */,
+				A0D48BBB2A4D50B10086DA54 /* CharacterCell.swift */,
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
+		A0D48BC42A4D64030086DA54 /* CharacterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48BC52A4D641D0086DA54 /* CharacterDetailsView.swift */,
+			);
+			path = CharacterDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,8 +363,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D48BD02A4D800E0086DA54 /* Assets.xcassets in Resources */,
 				A0D48B912A4CBDF60086DA54 /* Preview Assets.xcassets in Resources */,
-				A0D48B8E2A4CBDF60086DA54 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,13 +421,16 @@
 				A0D48B7F2A4CBC3A0086DA54 /* NetworkResponse.swift in Sources */,
 				A0D48B652A4CB8E40086DA54 /* CharactersView.swift in Sources */,
 				A0D48B7C2A4CB9CA0086DA54 /* URLRequest+Builder.swift in Sources */,
+				A0D48BCA2A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld in Sources */,
 				A0D48BAF2A4CC3090086DA54 /* CharactersClient.swift in Sources */,
 				A0D48BAC2A4CC2A90086DA54 /* URLRequest+Characters.swift in Sources */,
 				A0D48BA32A4CBF010086DA54 /* URLComponents+Characters.swift in Sources */,
 				A0D48BB22A4CC9CA0086DA54 /* CharactersViewModel.swift in Sources */,
+				A0D48BCD2A4D7D090086DA54 /* DataController.swift in Sources */,
 				A0D48B632A4CB8E40086DA54 /* SnufflesAppApp.swift in Sources */,
 				A0D48BB62A4D48390086DA54 /* Logger.swift in Sources */,
 				A0D48BBC2A4D50B10086DA54 /* CharacterCell.swift in Sources */,
+				A0D48BC62A4D641D0086DA54 /* CharacterDetailsView.swift in Sources */,
 				A0D48BA82A4CC1450086DA54 /* CharacterFilter.swift in Sources */,
 				A0D48BA52A4CBFA90086DA54 /* URLComponents+Init.swift in Sources */,
 				A0D48B7A2A4CB9B10086DA54 /* JSONDecoder+Shared.swift in Sources */,
@@ -418,13 +447,16 @@
 				A0D48B9B2A4CBE250086DA54 /* NetworkResponse.swift in Sources */,
 				A0D48B972A4CBE160086DA54 /* JSONEncode+Shared.swift in Sources */,
 				A0D48B9A2A4CBE160086DA54 /* URLRequest+Builder.swift in Sources */,
+				A0D48BCB2A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld in Sources */,
 				A0D48BB02A4CC3090086DA54 /* CharactersClient.swift in Sources */,
 				A0D48BB32A4CC9CA0086DA54 /* CharactersViewModel.swift in Sources */,
 				A0D48B9E2A4CBE3A0086DA54 /* CharactersView.swift in Sources */,
 				A0D48BA92A4CC1450086DA54 /* CharacterFilter.swift in Sources */,
+				A0D48BCE2A4D7D090086DA54 /* DataController.swift in Sources */,
 				A0D48B992A4CBE160086DA54 /* URLSession+Client.swift in Sources */,
 				A0D48BA62A4CBFAB0086DA54 /* URLComponents+Init.swift in Sources */,
 				A0D48B8A2A4CBDF50086DA54 /* SnufflesAppMacApp.swift in Sources */,
+				A0D48BC72A4D641D0086DA54 /* CharacterDetailsView.swift in Sources */,
 				A0D48BB72A4D48390086DA54 /* Logger.swift in Sources */,
 				A0D48BC22A4D62520086DA54 /* URLComponents+Characters.swift in Sources */,
 				A0D48B9C2A4CBE250086DA54 /* Character.swift in Sources */,
@@ -737,6 +769,19 @@
 			productName = Factory;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		A0D48BC82A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A0D48BC92A4D7C3D0086DA54 /* SnuffleApp.xcdatamodel */,
+			);
+			currentVersion = A0D48BC92A4D7C3D0086DA54 /* SnuffleApp.xcdatamodel */;
+			path = SnuffleApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A0D48B572A4CB8E40086DA54 /* Project object */;
 }

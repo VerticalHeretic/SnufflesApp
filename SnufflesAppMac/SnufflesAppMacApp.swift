@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct SnufflesAppMacApp: App {
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
             NavigationSplitView {
@@ -16,6 +18,7 @@ struct SnufflesAppMacApp: App {
             } detail: {
                 CharactersView()
             }
+            .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

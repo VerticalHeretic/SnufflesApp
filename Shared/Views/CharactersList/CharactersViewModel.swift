@@ -18,6 +18,7 @@ enum PagingState: Equatable {
 protocol CharactersViewModel: ObservableObject {
     func onItemAppear(_ character: Character)
     func fetchCharacters(reset: Bool)
+    func locationSelection(location: Location)
 }
 
 final class CharactersViewModelImpl: CharactersViewModel {
@@ -26,6 +27,9 @@ final class CharactersViewModelImpl: CharactersViewModel {
     @Published var filteredCharacters: [Character] = []
     @Published var state: PagingState = .loading
     @Published var characterName: String = ""
+    @Published var characterLocationName: String = ""
+    @Published var selectedCharacter: Character?
+    
     @Injected(\.charactersClient) var client
     var currentPage: Int = 1
     var nextPage: String?
@@ -44,17 +48,11 @@ final class CharactersViewModelImpl: CharactersViewModel {
     private var canLoadMorePages: Bool { nextPage != nil }
     
     init() {
-        Task {
-            await getCharacters()
-        }
-        
-        $characterName
-            .combineLatest($characters)
-            .receive(on: RunLoop.main)
-            .sink { name, characters in
-                self.filteredCharacters = characters.filter { $0.name.contains(name) }
-            }
-            .store(in: &cancellables)
+        setupBindings()
+    }
+    
+    func locationSelection(location: Location) {
+        characterLocationName = characterLocationName == location.name ? "" : location.name
     }
     
     func onItemAppear(_ character: Character) {
@@ -100,7 +98,7 @@ final class CharactersViewModelImpl: CharactersViewModel {
     @MainActor fileprivate func getCharacters() async {
         do {
             let charactersResponse = try await client.getCharacters(page: currentPage)
-            Log.network.info("Fetched characrers from page \(currentPage), with next url being: \(charactersResponse.info.next)")
+            Log.network.info("Fetched characrers from page \(currentPage), with next url being: \(String(describing: charactersResponse.info.next))")
             nextPage = charactersResponse.info.next
             characters += charactersResponse.results
             if nextPage != nil {
@@ -113,4 +111,13 @@ final class CharactersViewModelImpl: CharactersViewModel {
         }
     }
     
+    private func setupBindings() {
+        $characterName
+            .combineLatest($characters, $characterLocationName)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] name, characters, location in
+                self?.filteredCharacters = characters.filter { $0.name.contains(name) || $0.location.name == location }
+            }
+            .store(in: &cancellables)
+    }
 }
