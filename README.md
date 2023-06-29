@@ -6,6 +6,7 @@ App showing off usage of Rick And Morty API
 - [ ] MacOS target should be improved for working with side bar and details view
 - [ ] Add some Unit tests for logic
 - [ ] Work on to exclude the coreData logic from the view (for convinience it was put there, but probably should be done in viewModel or even some additionall service)
+- [ ] Errors and loadings could be more customised (UI) 
 
 
 ## Demo 
