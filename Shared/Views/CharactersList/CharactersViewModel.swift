@@ -31,6 +31,8 @@ final class CharactersViewModelImpl: CharactersViewModel {
     @Published var characterLocationName: String = ""
     @Published var selectedCharacter: Character?
     @Published var showFavorites = false
+    @Published var isLoading = false
+    @Published var error: String?
     
     @Injected(\.charactersClient) var client
     var currentPage: Int = 1
@@ -99,6 +101,8 @@ final class CharactersViewModelImpl: CharactersViewModel {
     
     @MainActor fileprivate func getCharacters() async {
         do {
+            self.isLoading = true
+            error = nil
             let charactersResponse = try await client.getCharacters(page: currentPage)
             Log.network.info("Fetched characrers from page \(currentPage), with next url being: \(String(describing: charactersResponse.info.next))")
             nextPage = charactersResponse.info.next
@@ -106,10 +110,12 @@ final class CharactersViewModelImpl: CharactersViewModel {
             if nextPage != nil {
                 currentPage += 1
             }
+            self.isLoading = false
             state = .loaded
         } catch {
             state = .error
             Log.network.error(error.localizedDescription)
+            self.error = error.localizedDescription
         }
     }
     

@@ -41,6 +41,8 @@ struct CharactersView: View {
         .refreshable {
             viewModel.fetchCharacters(reset: true)
         }
+        .loadable(isLoading: $viewModel.isLoading)
+        .errorable(error: $viewModel.error)
         .task {
             viewModel.fetchCharacters(reset: false)
         }
