@@ -43,6 +43,8 @@
 		A0D48BB72A4D48390086DA54 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BB52A4D48390086DA54 /* Logger.swift */; };
 		A0D48BBC2A4D50B10086DA54 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BBB2A4D50B10086DA54 /* CharacterCell.swift */; };
 		A0D48BBD2A4D50B10086DA54 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BBB2A4D50B10086DA54 /* CharacterCell.swift */; };
+		A0D48BC12A4D62330086DA54 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = A0D48BC02A4D62330086DA54 /* Factory */; };
+		A0D48BC22A4D62520086DA54 /* URLComponents+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BA22A4CBF010086DA54 /* URLComponents+Characters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D48BC12A4D62330086DA54 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +102,7 @@
 				A0D48B612A4CB8E40086DA54 /* SnufflesApp */,
 				A0D48B882A4CBDF50086DA54 /* SnufflesAppMac */,
 				A0D48B602A4CB8E40086DA54 /* Products */,
+				A0D48BBF2A4D62330086DA54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +231,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A0D48BBF2A4D62330086DA54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,12 +269,16 @@
 				A0D48B832A4CBDF50086DA54 /* Sources */,
 				A0D48B842A4CBDF50086DA54 /* Frameworks */,
 				A0D48B852A4CBDF50086DA54 /* Resources */,
+				A0D48BBE2A4D61F90086DA54 /* Swiftlint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SnufflesAppMac;
+			packageProductDependencies = (
+				A0D48BC02A4D62330086DA54 /* Factory */,
+			);
 			productName = SnufflesAppMac;
 			productReference = A0D48B872A4CBDF50086DA54 /* SnufflesAppMac.app */;
 			productType = "com.apple.product-type.application";
@@ -349,6 +364,25 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint .\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		A0D48BBE2A4D61F90086DA54 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint .\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -392,6 +426,7 @@
 				A0D48BA62A4CBFAB0086DA54 /* URLComponents+Init.swift in Sources */,
 				A0D48B8A2A4CBDF50086DA54 /* SnufflesAppMacApp.swift in Sources */,
 				A0D48BB72A4D48390086DA54 /* Logger.swift in Sources */,
+				A0D48BC22A4D62520086DA54 /* URLComponents+Characters.swift in Sources */,
 				A0D48B9C2A4CBE250086DA54 /* Character.swift in Sources */,
 				A0D48BAD2A4CC2A90086DA54 /* URLRequest+Characters.swift in Sources */,
 			);
@@ -608,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.verticalcoding.SnufflesAppMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -637,7 +672,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.verticalcoding.SnufflesAppMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -692,6 +727,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		A0D48BA02A4CBEC00086DA54 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0D48B9F2A4CBEC00086DA54 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		A0D48BC02A4D62330086DA54 /* Factory */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A0D48B9F2A4CBEC00086DA54 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;

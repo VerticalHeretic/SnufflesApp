@@ -11,7 +11,9 @@ import SwiftUI
 struct SnufflesAppApp: App {
     var body: some Scene {
         WindowGroup {
-            CharactersView()
+            NavigationView {
+                CharactersView()
+            }
         }
     }
 }

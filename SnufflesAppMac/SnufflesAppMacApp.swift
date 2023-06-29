@@ -11,7 +11,11 @@ import SwiftUI
 struct SnufflesAppMacApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationSplitView {
+                Text("Characters")
+            } detail: {
+                CharactersView()
+            }
         }
     }
 }
