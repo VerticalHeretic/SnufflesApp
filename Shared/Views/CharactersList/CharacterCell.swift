@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CharacterCell: View {
-    @Environment(\.managedObjectContext) private var context
-    
     var character: Character
+    var isFavorite: Bool
     var locationTapAction: () -> Void
+    var deleteAction: () -> Void
+    var addAction: () -> Void 
     
     var body: some View {
         HStack {
@@ -49,6 +50,16 @@ struct CharacterCell: View {
                         locationTapAction()
                     }
             }
+            
+            Spacer()
+            
+            Button(isFavorite ? "Remove": "Add") {
+                if isFavorite {
+                    deleteAction()
+                } else {
+                    addAction()
+                }
+            }
         }
         .padding(.horizontal)
     }
@@ -56,8 +67,13 @@ struct CharacterCell: View {
 
 struct CharacterCell_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterCell(character: .preview) {
+        CharacterCell(character: .preview, isFavorite: false) {
+            
+        } deleteAction: {
+            
+        } addAction: {
             
         }
+
     }
 }

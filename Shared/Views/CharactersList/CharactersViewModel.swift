@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 import Factory
 
 enum PagingState: Equatable {
@@ -29,6 +30,7 @@ final class CharactersViewModelImpl: CharactersViewModel {
     @Published var characterName: String = ""
     @Published var characterLocationName: String = ""
     @Published var selectedCharacter: Character?
+    @Published var showFavorites = false
     
     @Injected(\.charactersClient) var client
     var currentPage: Int = 1

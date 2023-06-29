@@ -13,9 +13,7 @@ struct SnufflesAppMacApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationSplitView {
-                Text("Characters")
-            } detail: {
+            NavigationView {
                 CharactersView()
             }
             .environment(\.managedObjectContext, dataController.container.viewContext)

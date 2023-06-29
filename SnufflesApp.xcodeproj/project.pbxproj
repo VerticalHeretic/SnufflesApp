@@ -51,6 +51,10 @@
 		A0D48BCD2A4D7D090086DA54 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BCC2A4D7D090086DA54 /* DataController.swift */; };
 		A0D48BCE2A4D7D090086DA54 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BCC2A4D7D090086DA54 /* DataController.swift */; };
 		A0D48BD02A4D800E0086DA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D48B662A4CB8E50086DA54 /* Assets.xcassets */; };
+		A0D48BD22A4D86720086DA54 /* FavoriteCharactersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BD12A4D86720086DA54 /* FavoriteCharactersList.swift */; };
+		A0D48BD32A4D86720086DA54 /* FavoriteCharactersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BD12A4D86720086DA54 /* FavoriteCharactersList.swift */; };
+		A0D48BD62A4D8CFC0086DA54 /* FavoriteCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BD52A4D8CFC0086DA54 /* FavoriteCharacterCell.swift */; };
+		A0D48BD72A4D8CFC0086DA54 /* FavoriteCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D48BD52A4D8CFC0086DA54 /* FavoriteCharacterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +85,8 @@
 		A0D48BC52A4D641D0086DA54 /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
 		A0D48BC92A4D7C3D0086DA54 /* SnuffleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnuffleApp.xcdatamodel; sourceTree = "<group>"; };
 		A0D48BCC2A4D7D090086DA54 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A0D48BD12A4D86720086DA54 /* FavoriteCharactersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCharactersList.swift; sourceTree = "<group>"; };
+		A0D48BD52A4D8CFC0086DA54 /* FavoriteCharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCharacterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +230,7 @@
 		A0D48B9D2A4CBE2A0086DA54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A0D48BD42A4D8CD70086DA54 /* FavoriteCharactersList */,
 				A0D48BC32A4D63FB0086DA54 /* CharactersList */,
 			);
 			path = Views;
@@ -262,6 +269,15 @@
 				A0D48BC52A4D641D0086DA54 /* CharacterDetailsView.swift */,
 			);
 			path = CharacterDetails;
+			sourceTree = "<group>";
+		};
+		A0D48BD42A4D8CD70086DA54 /* FavoriteCharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				A0D48BD12A4D86720086DA54 /* FavoriteCharactersList.swift */,
+				A0D48BD52A4D8CFC0086DA54 /* FavoriteCharacterCell.swift */,
+			);
+			path = FavoriteCharactersList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +435,7 @@
 				A0D48B782A4CB9970086DA54 /* JSONEncode+Shared.swift in Sources */,
 				A0D48B762A4CB96F0086DA54 /* URLSession+Client.swift in Sources */,
 				A0D48B7F2A4CBC3A0086DA54 /* NetworkResponse.swift in Sources */,
+				A0D48BD22A4D86720086DA54 /* FavoriteCharactersList.swift in Sources */,
 				A0D48B652A4CB8E40086DA54 /* CharactersView.swift in Sources */,
 				A0D48B7C2A4CB9CA0086DA54 /* URLRequest+Builder.swift in Sources */,
 				A0D48BCA2A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld in Sources */,
@@ -434,6 +451,7 @@
 				A0D48BA82A4CC1450086DA54 /* CharacterFilter.swift in Sources */,
 				A0D48BA52A4CBFA90086DA54 /* URLComponents+Init.swift in Sources */,
 				A0D48B7A2A4CB9B10086DA54 /* JSONDecoder+Shared.swift in Sources */,
+				A0D48BD62A4D8CFC0086DA54 /* FavoriteCharacterCell.swift in Sources */,
 				A0D48B812A4CBCD50086DA54 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +463,7 @@
 				A0D48BBD2A4D50B10086DA54 /* CharacterCell.swift in Sources */,
 				A0D48B982A4CBE160086DA54 /* JSONDecoder+Shared.swift in Sources */,
 				A0D48B9B2A4CBE250086DA54 /* NetworkResponse.swift in Sources */,
+				A0D48BD32A4D86720086DA54 /* FavoriteCharactersList.swift in Sources */,
 				A0D48B972A4CBE160086DA54 /* JSONEncode+Shared.swift in Sources */,
 				A0D48B9A2A4CBE160086DA54 /* URLRequest+Builder.swift in Sources */,
 				A0D48BCB2A4D7C3D0086DA54 /* SnuffleApp.xcdatamodeld in Sources */,
@@ -460,6 +479,7 @@
 				A0D48BB72A4D48390086DA54 /* Logger.swift in Sources */,
 				A0D48BC22A4D62520086DA54 /* URLComponents+Characters.swift in Sources */,
 				A0D48B9C2A4CBE250086DA54 /* Character.swift in Sources */,
+				A0D48BD72A4D8CFC0086DA54 /* FavoriteCharacterCell.swift in Sources */,
 				A0D48BAD2A4CC2A90086DA54 /* URLRequest+Characters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,7 +695,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.verticalcoding.SnufflesAppMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -704,7 +724,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.verticalcoding.SnufflesAppMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
