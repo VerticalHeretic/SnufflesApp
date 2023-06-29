@@ -9,8 +9,8 @@ import Foundation
 
 extension URLRequest {
     
-    static var getCharacters: Self {
-        Self(components: .characters)
+    static func getCharacters(page: Int?) -> Self {
+        Self(components: .characters(page: page))
     }
     
     static func getCharacter(id: Int) -> Self {

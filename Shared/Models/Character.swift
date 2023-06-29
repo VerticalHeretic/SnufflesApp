@@ -11,14 +11,25 @@ struct Character: Decodable, Identifiable {
     let id: Int
     let name: String
     let status: Status
-    let species: Species
+    let species: String
     let type: String
-    let gender: Gender
+    let gender: String
     let origin, location: Location
     let image: String
     let episode: [String]
     let url: String
     let created: String
+    
+    var statusEmoji: String {
+        switch status {
+        case .alive:
+            return "🖖🏻"
+        case .dead:
+            return "☠️"
+        case .unknown:
+            return "⁉️"
+        }
+    }
 }
 
 enum Gender: String, Decodable {
@@ -30,11 +41,6 @@ enum Gender: String, Decodable {
 struct Location: Decodable {
     let name: String
     let url: String
-}
-
-enum Species: String, Decodable {
-    case alien = "Alien"
-    case human = "Human"
 }
 
 enum Status: String, Decodable {

@@ -11,8 +11,14 @@ extension URLComponents {
 
     private static let basePath = "/character"
     
-    static var characters: Self {
-        return Self(path: basePath)
+    static func characters(page: Int?) -> Self {
+        var queryItems: [URLQueryItem] = []
+        
+        if let page {
+            queryItems.append(.init(name: "page", value: "\(page)"))
+        }
+        
+        return Self(path: basePath, queryItems: queryItems)
     }
     
     static func character(id: Int) -> Self {

@@ -9,7 +9,7 @@ import Foundation
 import Factory
 
 protocol CharactersClient {
-    func getCharacters() async throws -> NetworkResponse<Character>
+    func getCharacters(page: Int?) async throws -> NetworkResponse<Character>
     func getCharacter(with id: Int) async throws -> Character
     func getFilteredCharacters(with filter: CharacterFilter) async throws -> NetworkResponse<Character>
 }
@@ -22,8 +22,8 @@ struct CharactersClientImpl: CharactersClient {
         self.urlSession = urlSession
     }
     
-    func getCharacters() async throws -> NetworkResponse<Character> {
-        return try await urlSession.request(for: .getCharacters)
+    func getCharacters(page: Int?) async throws -> NetworkResponse<Character> {
+        return try await urlSession.request(for: .getCharacters(page: page))
     }
     
     func getCharacter(with id: Int) async throws -> Character {

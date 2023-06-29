@@ -10,35 +10,31 @@ import Factory
 
 struct CharactersView: View {
     
-    @Injected(\.charactersClient) var client
-    @State var characters: [Character] = []
+    @StateObject var viewModel = CharactersViewModelImpl()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            
-            ForEach(characters) { character in
-                VStack {
-                    HStack {
-                        Text(character.name)
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVStack(alignment: .leading, spacing: 20) {
+                    if !viewModel.characterName.isEmpty {
+                        ForEach(viewModel.filteredCharacters) { character in
+                            CharacterCell(character: character)
+                        }
+                    } else {
+                        ForEach(viewModel.characters) { character in
+                            CharacterCell(character: character)
+                                .onAppear {
+                                    viewModel.onItemAppear(character)
+                                }
+                        }
                     }
                 }
             }
-        }
-        .task {
-            do {
-                let response = try await client.getCharacters()
-                withAnimation {
-                    characters = response.results
-                }
-            } catch {
-                print(error) // TODO: Change to logger
+            .navigationTitle("SnufflesApp 🚀")
+            .searchable(text: $viewModel.characterName)
+            .refreshable {
+                viewModel.fetchCharacters(reset: true)
             }
-            
-            
         }
     }
 }
